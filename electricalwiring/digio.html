@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Digital IO</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
+        <div><p>FluxRobot Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to FluxRobot</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../rbasics/index.html">Basics</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../rbasics/coordsystems.html">Basic coordinate systems</a></li>
+        <li><button class="tree blank"></button><a href="../rbasics/fanuccoords.html">Robot coordinates</a></li>
+        <li><button class="tree blank"></button><a href="../rbasics/fanucframes.html">Frame concept</a></li>
+        <li><button class="tree blank"></button><a href="../rbasics/fanuccordmove.html">Motion commands </a></li>
+        <li><button class="tree blank"></button><a href="../rbasics/fanucaxlimits.html">Fanuc Axlimits</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../setup_robot/index.html">Setup and run the robot</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../setup_robot/pointer.html">Measure Pointer length</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/pinchgripper.html">Calibrate Pinch Gripper</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/vacuumgripper.html">Calibrate Vacuum Gripper</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/setuprobot.html">Setup Robot to Machine</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/pallet.html">Setup Pallet</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/dispenser.html">Setup Dispenser</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/partseparator.html">Setup PartSeparator</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/doublesheet.html">Setup DoublesheetDetector</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/regrip.html">Setup Regrip</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/centering.html">Setup CenteringTable</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/deposit.html">Setup Deposit</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/toolchanger.html">ToolChanger</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/gripperchanger.html">GripperChanger</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/fluxload.html">Program Flux and load robot</a></li>
+        <li><button class="tree blank"></button><a href="../setup_robot/advanced.html">Run the fanuc in auto mode</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../motionsequences/index.html">Motion sequences</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../motionsequences/pickup_pinch.html">Pickup from dispenser</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/pickup_vac.html">Pickup from pallet</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/partseparator.html">Setup PartSeparator</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/doublesheet.html">Setup DoublesheetDetector</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/regrip.html">Setup Regrip</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/centering.html">Centering table motion</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/deposit.html">Deposit</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/toolchanger.html">ToolChanger</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/gripperchanger.html">GripperChanger</a></li>
+        <li><button class="tree blank"></button><a href="../motionsequences/bend.html">Bend</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../setup_flux/index.html">Setup Flux TMM configuration</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../setup_flux/robot.html">Robot</a></li>
+        <li><button class="tree blank"></button><a href="../setup_flux/dispenser.html">Dispenser</a></li>
+        <li><button class="tree blank"></button><a href="../setup_flux/pickuppallet.html">PickupPallet</a></li>
+        <li><button class="tree blank"></button><a href="../setup_flux/centertable.html">Centering table</a></li>
+        <li><button class="tree blank"></button><a href="../setup_flux/regrip.html">regrip station </a></li>
+        <li><button class="tree blank"></button><a href="../setup_flux/dropoff.html">Drop off pallet</a></li>
+        <li><button class="tree blank"></button><a href="../setup_flux/toolchanger.html">Tool changer</a></li>
+      </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../gripper/index.html">How to create a Gripper</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../lsprogramming/index.html">NC-Coode and postprocessor</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../lsprogramming/rnc.html">Flux .RNC output</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/post_matlab.html">Postprocessor Matlab</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/post_c.html">Postprocessor C#</a></li>
+        <li><button class="tree blank"></button><a href="../lsprogramming/ls.html">LS output</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../fanuchw/index.html">Fanuc functions & macros</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../fanuchw/operation.html">General operation procedure</a></li>
+        <li><button class="tree blank"></button><a href="../fanuchw/fr_bgallign.html">FR_BgAllign</a></li>
+        <li><button class="tree blank"></button><a href="../fanuchw/fr_stacksearch.html">FR_StackSearch</a></li>
+        <li><button class="tree blank"></button><a href="../fanuchw/fr_scale.html">FFR_Scale</a></li>
+        <li><button class="tree blank"></button><a href="../fanuchw/fr_gripclose.html">FR_GRipClose</a></li>
+        <li><button class="tree blank"></button><a href="../fanuchw/communication.html">Communication</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="index.html">Electrical wiring</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="wiring.html">Wiring of the Fanuc cabinet</a></li>
+        <li><button class="tree blank"></button><a href="bg.html">Wiring the back gauge sensors</a></li>
+        <li><button class="tree blank"></button><a href="robwrist.html">Connectors on the robot wrist</a></li>
+        <li><button class="tree blank"></button><a href="robback.html">Connectors on the robot back hub</a></li>
+        <li><button class="tree blank"></button><a href="gripper.html">Gripper</a></li>
+        <li><button class="tree blank"></button><a class="active" href="digio.html">Digital IO</a></li>
+        <li><button class="tree blank"></button><a href="analogio.html">Analog IO's</a></li>
+        <li><button class="tree blank"></button><a href="manifold.html">Manifold</a></li>
+        <li><button class="tree blank"></button><a href="userio.html">UserIO</a></li>
+        <li><button class="tree blank"></button><a href="safety.html">Safety</a></li>
+        <li><button class="tree blank"></button><a href="iooutput.html">Use the IO outputs</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">Electrical wiring</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="digio.html">Digital IO</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Digital IO</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The digital IO configuration could be Read from ioconfig.dg</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_digin">DigIN</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>DIN  497  - 512   RACK:   1   SLOT:   2   PORT:   1
+DIN[ 497]  PARTPRES
+498
+499
+500
+501
+502
+511 USR_IN1
+512 USR_IN2</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_digout">DigOUT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>DOUT  497  - 512   RACK:   1   SLOT:   3   PORT:   1  CHANNEL:   4</p>
+</div>
+<div class="paragraph">
+<p>Port 580 to Port 512 is usable</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>DOUT[ 499]  GRIP_CLOSE
+DOUT[ 500]  GRIP_OPEN
+DOUT[ 501]  GRIP_ENB
+DOUT[ 502]  PDISP_ENB
+DOUT[ 503]  PDISP_UP
+DOUT[ 504]  PDISP_DOWN
+DOUT[ 505]  VAC_GRIP_ON
+DOUT[ 506]  SUCTION_ON
+507
+508
+509
+510 Relay1
+DOUT[ 511] USR_OUT1
+DOUT[ 512] USR_OUT2</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_relais">Relais</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/w2.png" alt="w2"></span></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Relai1 : on DO[497] - ....</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Relai2 : on DO[497] - ....</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Relai3 : on DO[497] - ....</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Relai4 : on DO[497] - ....</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Relai5 : on DO[497] - ....</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ethercat_ports">Ethercat Ports</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>sfasdf</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_digin">DigIN</a>
+    </li>
+    <li level="1">
+      <a href="#_digout">DigOUT</a>
+    </li>
+    <li level="1">
+      <a href="#_relais">Relais</a>
+    </li>
+    <li level="1">
+      <a href="#_ethercat_ports">Ethercat Ports</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="gripper.html">Gripper</a></span>
+  <span class="next"><a href="analogio.html">Analog IO's</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2023 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

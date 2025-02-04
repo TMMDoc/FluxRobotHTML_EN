@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../res/tree.css">
   <link rel="stylesheet" href="../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>How to create a Gripper</title>
+  <title>Customized grippers</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -83,7 +83,13 @@
         <li><button class="tree blank"></button><a href="../setup_flux/toolchanger.html">Tool changer</a></li>
       </ul>
     </li>
-    <li><button class="tree blank"></button><a class="active" href="index.html">How to create a Gripper</a></li>
+    <li>
+      <button class="tree open"></button>
+      <a class="active" href="index.html">Customized grippers</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="cups.html">Trumpf standard vacuum cups</a></li>
+      </ul>
+    </li>
     <li>
       <button class="tree closed"></button>
       <a href="../lsprogramming/index.html">NC-Coode and postprocessor</a>
@@ -123,6 +129,29 @@
         <li><button class="tree blank"></button><a href="../electricalwiring/iooutput.html">Use the IO outputs</a></li>
       </ul>
     </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../dev_components/index.html">Flux: Tweeak Components</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../dev_components/cellcomponents.html">Flux: Cell components</a></li>
+        <li><button class="tree blank"></button><a href="../dev_components/pinch.html">Adjust Pinch gripper offset</a></li>
+        <li><button class="tree blank"></button><a href="../dev_components/gripper.html">Tweak a gripper CAD geometry</a></li>
+        <li><button class="tree blank"></button><a href="../dev_components/dispenser.html">Change dispenser geometry</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../dev_devnotes/index.html">DEV: Developer notes</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../dev_devnotes/basicop.html">Basics on the Robot</a></li>
+        <li><button class="tree blank"></button><a href="../dev_devnotes/fanucframes.html">Frame concept (RACell)</a></li>
+        <li><button class="tree blank"></button><a href="../dev_devnotes/dh.html">Denavit–Hartenberg parameters</a></li>
+        <li><button class="tree blank"></button><a href="../dev_devnotes/defofrotation.html">Definition of rotations</a></li>
+        <li><button class="tree blank"></button><a href="../dev_devnotes/pickup_comp.html">Pickup comparison</a></li>
+        <li><button class="tree blank"></button><a href="../dev_devnotes/check.html">Check frames</a></li>
+        <li><button class="tree blank"></button><a href="../dev_devnotes/digitalio.html">Aacessing Digital IO' in robot: </a></li>
+      </ul>
+    </li>
   </ul>
 </div>
 
@@ -135,53 +164,44 @@
     </button>
   </div>
   <div>
-    <a href="index.html">How to create a Gripper</a>
+    <a href="index.html">Customized grippers</a>
   </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>How to create a Gripper</h1>
+                        <h1>Customized grippers</h1>
 <div class="sect1">
 <h2 id="_design">Design</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A gripper has to be designed. Example material is in 04_components\Gripper</p>
+<p>A good gripper is often the key to a good bend sequence in FluxBend. In order to find an efficient solution you might take minigripper.STL and modify the coordinates of the suction cups until you have a good solution. Example material is in 04_components\Gripper. The STL file (binary) represents the collision geometry, the dat file the position of the geometrical properties, information about the suction cup position, group and type. List of all available suction cups can be found in the next page</p>
+</div>
+<div class="paragraph">
+<p>The content of the .dat file is:
+    NAME=Custom
+    CUPNAME=SAF50
+    CUPZPOS=186
+    CUPS=4
+    CUP1POS=100,85 #1
+    CUP2POS=100,-85 #2
+    CUP3POS=200,85 #3
+    CUP4POS=200,-85 #4</p>
+</div>
+<div class="paragraph">
+<p>Import the Gripper via Edit &gt; Database &gt; Bend Grippers</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="img/partdimensions.png" alt="PartDimensions">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/2ddrawing.png" alt="2Ddrawing">
+<img src="img/import.png" alt="import">
 </div>
 </div>
 <div class="paragraph">
-<p>The Import is based on on a .dat and a .stl fil. User can import the stl file for gripper model. Attached sample stl and dat file. dat file is needed to get some information about the suction cup position, group and type. List of all available suction cups can be found in the attached cups.curl file. Sample dat file content is shown below:</p>
+<p>After finding the optimal position you could produce a Gripper.</p>
 </div>
 <div class="paragraph">
-<p>The content of the .dat file is:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>NAME=Vacuummini
-CUPNAME=SAF50
-CUPZPOS=186
-CUPS=4
-CUP1POS=40,40 #1
-CUP2POS=40,-40 #2
-CUP3POS=-40,40 #3
-CUP4POS=-40,-40 #4</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The Gripper height in the assembled state needs to be measured in the activated state (sucktion on)</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/calib_palletheight.png" alt="Calib palletheight"></span></p>
+<p><span class="image"><img src="img/2ddrawing.png" alt="2Ddrawing"></span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -190,13 +210,23 @@ CUP4POS=-40,-40 #4</pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-after the gripper is experimentally measued adjust the .dat file to the actual height.
+The Gripper height in the assembled state needs to be measured in the activated state (sucktion on).
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/partpositon.png" alt="partpositon"></span></p>
+<p><span class="image"><img src="img/length1.png" alt="length1"></span></p>
+</div>
+<div class="paragraph">
+<p>The precise calculation of CUPZPOS in .dat is calculated to</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>A = Clutch lenght
+B = Adapter length
+C = Suction cup length. See:  xref:..\cups#[cups]]</pre>
+</div>
 </div>
 </div>
 </div>
@@ -217,7 +247,7 @@ after the gripper is experimentally measued adjust the .dat file to the actual h
             </div>
             <nav class="pagination">
   <span class="prev"><a href="../setup_flux/toolchanger.html">Tool changer</a></span>
-  <span class="next"><a href="../lsprogramming/index.html">NC-Coode and postprocessor</a></span>
+  <span class="next"><a href="cups.html">Trumpf standard vacuum cups</a></span>
 </nav>
 
         </div>

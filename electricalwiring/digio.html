@@ -113,6 +113,48 @@
       </ul>
     </li>
     <li>
+      <button class="tree closed"></button>
+      <a href="../hmi/index.html">Cell HMI</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../hmi/load_pgrm.html">Load program on robot</a></li>
+        <li><button class="tree blank"></button><a href="../hmi/fetch_backup.html">fetch config from Robot</a></li>
+        <li><button class="tree blank"></button><a href="../hmi/partcounter.html">Part counter</a></li>
+        <li><button class="tree blank"></button><a href="../hmi/frametool.html">Frame tool</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../ra_interface/index.html">RA interface</a>
+      <ul class="hide">
+        <li>
+          <button class="tree closed"></button>
+          <a href="../ra_interface/1_generalinformation/index.html">General information</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../ra_interface/1_generalinformation/typesofcuppling.html">Types of robot couplings</a></li>
+            <li><button class="tree blank"></button><a href="../ra_interface/1_generalinformation/digitaliocoupling/index.html">Digital coupling</a></li>
+            <li><button class="tree blank"></button><a href="../ra_interface/1_generalinformation/loosesyncronizedcoupling/index.html">Loose syncronized coupling</a></li>
+            <li><button class="tree blank"></button><a href="../ra_interface/1_generalinformation/thightsyncronized/index.html">Thight syncronized coupling with FluxRobot</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../ra_interface/2_descriptionofhardware/index.html">Description of the hardware</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../ra_interface/2_descriptionofhardware/digitalingerface.html">Digital interface</a></li>
+            <li><button class="tree blank"></button><a href="../ra_interface/2_descriptionofhardware/ethercat.html">Ethercat</a></li>
+            <li><button class="tree blank"></button><a href="../ra_interface/2_descriptionofhardware/rainterface.html">RA interface</a></li>
+            <li><button class="tree blank"></button><a href="../ra_interface/2_descriptionofhardware/security_network.html">Network security</a></li>
+          </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../ra_interface/3_machineconfiguration/index.html">Machine configuration</a></li>
+        <li><button class="tree blank"></button><a href="../ra_interface/4_bendingprogram/index.html">How to create a Bending program</a></li>
+        <li><button class="tree blank"></button><a href="../ra_interface/5_bendingsteps/index.html">bending steps in detail</a></li>
+        <li><button class="tree blank"></button><a href="../ra_interface/6_inputsandoutputsofdigitalinterface/index.html">Inputs and outputs </a></li>
+        <li><button class="tree blank"></button><a href="../ra_interface/7_teachandautomaticmode/index.html">Teach and automatic mode</a></li>
+        <li><button class="tree blank"></button><a href="../ra_interface/8_windowssystemcontrol/index.html">Windows system </a></li>
+      </ul>
+    </li>
+    <li>
       <button class="tree open"></button>
       <a href="index.html">Electrical wiring</a>
       <ul>
@@ -181,93 +223,131 @@
 <div class="paragraph">
 <p>The digital IO configuration could be Read from ioconfig.dg</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_digin">DigIN</h2>
-<div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>DIN  497  - 512   RACK:   1   SLOT:   2   PORT:   1
-DIN[ 497]  PARTPRES
-498
-499
-500
-501
-502
-511 USR_IN1
-512 USR_IN2</pre>
+<pre>F Number: YH80092
+VERSION : HandlingTool
+$VERSION: V9.40356       3/1/2024
+DATE:     04-FEB-25 16:36
+IO CONFIGURATION::</pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_digout">DigOUT</h2>
+<h2 id="_ethercat_inputs">-------------------------------------------------"ETHERCAT INPUTS"-------------------------------------</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>DOUT  497  - 512   RACK:   1   SLOT:   3   PORT:   1  CHANNEL:   4</p>
-</div>
-<div class="paragraph">
-<p>Port 580 to Port 512 is usable</p>
-</div>
 <div class="literalblock">
 <div class="content">
-<pre>DOUT[ 499]  GRIP_CLOSE
-DOUT[ 500]  GRIP_OPEN
-DOUT[ 501]  GRIP_ENB
-DOUT[ 502]  PDISP_ENB
-DOUT[ 503]  PDISP_UP
-DOUT[ 504]  PDISP_DOWN
-DOUT[ 505]  VAC_GRIP_ON
-DOUT[ 506]  SUCTION_ON
-507
-508
-509
-510 Relay1
-DOUT[ 511] USR_OUT1
-DOUT[ 512] USR_OUT2</pre>
+<pre>DIN[   1]  NC_START
+DIN[   2]  BACKGAUGE_IN_POSITION
+DIN[   3]  FIRST_BEND_ACTIVE
+DIN[   4]  LAST_BEND_ACTIVE
+DIN[   5]  RAM_MOVING
+DIN[   6]  CLAMPING_POINT
+DIN[   7]  LDP_REACHED
+DIN[   8]  EoD_REACHED
+DIN[   9]  UDP_REACHED
+DIN[  10]  BELOW_MUTE_POINT
+DIN[  11]  PRESS_OK
+DIN[  12]  FPDOWN
+DIN[  13]  GRIPPER_OPEN_FB
+DIN[  14]  GRIPPER_CLOSE_FB
+DIN[  15]  POS
+DIN[  16]  WORK_TABLE_ZONE
+DIN[  17]  ONE_FINGER_ALIGN
+DIN[  18]  SUCTION_CMD
+DIN[  19]  PDISP_UP_CMD
+DIN[  20]  PDISP_DWN_CMD
+DIN    1  - 100   RACK: 106   SLOT:   1   PORT:  19 ---------------------"Specifies ethercat configuration"-----------------------------
+DIN  105  - 120   RACK:   1   SLOT:   2   PORT:  17
+DIN  121  - 300   RACK: 106   SLOT:   1   PORT: 145</pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_relais">Relais</h2>
+<h2 id="_wired_digital_inputs">-----------------------------------------------------------"Wired Digital Inputs"---------------------------------------------</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><span class="image"><img src="img/w2.png" alt="w2"></span></p>
-</div>
 <div class="literalblock">
 <div class="content">
-<pre>Relai1 : on DO[497] - ....</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Relai2 : on DO[497] - ....</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Relai3 : on DO[497] - ....</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Relai4 : on DO[497] - ....</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Relai5 : on DO[497] - ....</pre>
+<pre>DIN[ 481]  DI1
+DIN[ 482]  PARTPRES
+DIN[ 483]  STACK_HEIGHT_FB
+DIN  481  - 512   RACK:   1   SLOT:   2   PORT:   1</pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ethercat_ports">Ethercat Ports</h2>
+<h2 id="_ethercat_digital_outputs">-----------------------------------------------------------"ETHERCAT Digital Outputs"---------------------------------------------</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>sfasdf</p>
+<div class="literalblock">
+<div class="content">
+<pre>DOUT[   1]  CLAMPING_POINT_BIT
+DOUT[   2]  MOVE_TO_LDP
+DOUT[   3]  MOVE_TO_UDP
+DOUT[   4]  STEP_CHANGE
+DOUT[   5]  START_PROGRAM
+DOUT[   6]  ENABLE_RAM_DOWN
+DOUT[   8]  ROBOUNSAFE
+DOUT[   9]  DECOMP_ENB
+DOUT[  10]  ROBO_AUTO
+DOUT[  11]  T1_MODE
+DOUT[  13]  PUNCH_CLAMP
+DOUT[  14]  PUNCH_UNCLAMP
+DOUT[  15]  TOOL_CHANGE_ON
+DOUT    1  - 480   RACK: 106   SLOT:   1   PORT:  21</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wired_digital_inputs_2">-----------------------------------------------------------"Wired Digital Inputs"---------------------------------------------</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>DOUT[ 481]  PUSH_BWD NORMAL  COMP.: TRUE     (Push cylinder on pinch gripper move back command)
+DOUT[ 482]  PUSH_FWD NORMAL  COMP.: TRUE     (Push cylinder on pinch gripper move forward command)
+DOUT[ 483]  GRIP_CLOSE                       (Pinch gripper close cmd)
+DOUT[ 484]  GRIP_OPEN						(Pinch gripper Open cmd)
+DOUT[ 485]  GRIP_ENB						(Enable air supply to vacuum gripper)
+DOUT[ 486]  PDISP_ENB						(Enable air supply to part despenser vacuum cups)
+DOUT[ 487]  PDISP_UP                        (Part despenser cylinder up cmd)
+DOUT[ 488]  PDISP_DOWN						(Part despenser cylinder down cmd)
+DOUT[ 489]  VAC_GRIP_ON						(Suction ON command for vacuum gripper)
+DOUT[ 490]  SUCTION_ON						(Suction ON command for vacuum cups in part despenser)
+DOUT[ 491]  RELAY4
+DOUT[ 492]  RELAY5
+DOUT[ 493]  RELAY3
+DOUT[ 494]  RELAY1
+DOUT[ 495]  RELAY2
+DOUT  481  - 512   RACK:   1   SLOT:   3   PORT:   1</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wired_analog_inputs">-----------------------------------------------------------"Wired Analog Inputs"---------------------------------------------</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>AIN    1   RACK:   1   SLOT:   1   CHANNEL:   1
+AIN    2   RACK:   1   SLOT:   1   CHANNEL:   2
+AIN    3   RACK:   1   SLOT:   1   CHANNEL:   3
+AIN    4   RACK:   1   SLOT:   1   CHANNEL:   4
+GIN[   1] Z1_ANGLE
+GIN    1   RACK: 106   SLOT:   1   PORT:  97   #NUM:  16
+GIN[   2] RA_POS_CMD
+GIN    2   RACK: 106   SLOT:   1   PORT: 113   #NUM:  16
+GIN    3   RACK: 106   SLOT:   1   PORT: 129   #NUM:  16
+GOUT[   1] Z1_DIFF
+GOUT    1   RACK: 106   SLOT:   1   PORT:  97   #NUM:  16
+GOUT[   2] Z2_DIFF
+GOUT    2   RACK: 106   SLOT:   1   PORT: 113   #NUM:  16
+GOUT[   3] ROBOT_POS_FB
+GOUT    3   RACK: 106   SLOT:   1   PORT: 129   #NUM:  16</pre>
+</div>
 </div>
 </div>
 </div>
@@ -279,16 +359,19 @@ DOUT[ 512] USR_OUT2</pre>
   <h3>Contents</h3>
   <ul>
     <li level="1">
-      <a href="#_digin">DigIN</a>
+      <a href="#_ethercat_inputs">-------------------------------------------------"ETHERCAT INPUTS"-------------------------------------</a>
     </li>
     <li level="1">
-      <a href="#_digout">DigOUT</a>
+      <a href="#_wired_digital_inputs">-----------------------------------------------------------"Wired Digital Inputs"---------------------------------------------</a>
     </li>
     <li level="1">
-      <a href="#_relais">Relais</a>
+      <a href="#_ethercat_digital_outputs">-----------------------------------------------------------"ETHERCAT Digital Outputs"---------------------------------------------</a>
     </li>
     <li level="1">
-      <a href="#_ethercat_ports">Ethercat Ports</a>
+      <a href="#_wired_digital_inputs_2">-----------------------------------------------------------"Wired Digital Inputs"---------------------------------------------</a>
+    </li>
+    <li level="1">
+      <a href="#_wired_analog_inputs">-----------------------------------------------------------"Wired Analog Inputs"---------------------------------------------</a>
     </li>
   </ul>
 </aside>
